@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Better Half ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Georgia',serif;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+background:linear-gradient(-45deg,#ffd6e8,#ffe8f2,#fff5f8,#ffe3ee);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+text-align:center;
+position:relative;
+z-index:2;
+}
+
+h3{
+margin-bottom:20px;
+color:#b0004d;
+}
+
+.envelope{
+position:relative;
+width:280px;
+height:180px;
+margin:auto;
+cursor:pointer;
+}
+
+.base{
+position:absolute;
+bottom:0;
+width:100%;
+height:120px;
+background:#ff9dbd;
+border-radius:0 0 8px 8px;
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+.flap{
+position:absolute;
+top:0;
+width:0;
+height:0;
+border-left:140px solid transparent;
+border-right:140px solid transparent;
+border-top:90px solid #ff6f9d;
+transform-origin:top;
+transition:1s;
+z-index:5;
+}
+
+.heart{
+position:absolute;
+top:65px;
+left:50%;
+transform:translateX(-50%) rotate(-45deg);
+width:40px;
+height:40px;
+background:#ff003c;
+animation:beat 1s infinite;
+z-index:6;
+}
+
+.heart:before,
+.heart:after{
+content:'';
+position:absolute;
+width:40px;
+height:40px;
+background:#ff003c;
+border-radius:50%;
+}
+
+.heart:before{
+top:-20px;
+left:0;
+}
+
+.heart:after{
+left:20px;
+top:0;
+}
+
+@keyframes beat{
+0%,100%{transform:translateX(-50%) rotate(-45deg) scale(1);}
+50%{transform:translateX(-50%) rotate(-45deg) scale(1.15);}
+}
+
+.letter{
+position:absolute;
+left:15px;
+top:30px;
+width:250px;
+height:330px;
+background:white;
+border-radius:12px;
+padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+transform:translateY(120px);
+opacity:0;
+transition:1s;
+overflow:auto;
+z-index:1;
+text-align:left;
+}
+
+.open .flap{
+transform:rotateX(180deg);
+}
+
+.open .letter{
+transform:translateY(-190px);
+opacity:1;
+}
+
+#text{
+white-space:pre-line;
+line-height:1.7;
+color:#444;
+}
+
+button{
+display:none;
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#ff4d88;
+color:white;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
+transition:.3s;
+}
+
+button:hover{
+background:#ff236d;
+}
+
+#final{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(255,235,245,.98);
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+animation:fade 2s;
+z-index:100;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+#final h1{
+color:#d10059;
+font-size:42px;
+margin-bottom:20px;
+}
+
+#final p{
+font-size:22px;
+line-height:1.8;
+color:#555;
+}
+
+.float{
+position:fixed;
+font-size:22px;
+animation:rise linear forwards;
+pointer-events:none;
+}
+
+@keyframes rise{
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h3>💌 Open Me 💌</h3>
+
+<div class="envelope" id="env">
+
+<div class="flap"></div>
+
+<div class="base"></div>
+
+<div class="heart"></div>
+
+<div class="letter">
+
+<h2 style="color:#d10059;text-align:center;">To My Dearest Acchu ❤️</h2>
+
+<p id="text"></p>
+
+<button id="next">One More Time ❤️</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="final">
+
+<div>
+
+<h1>❤️ Forever & Always ❤️</h1>
+
+<p>
+I Love You Today.<br><br>
+
+I Love You Tomorrow.<br><br>
+
+And I'll Love You Every Day After That.<br><br>
+
+No matter where life takes us,<br>
+my heart will always find its way back to you.<br><br>
+
+Thank you for being my favorite person,
+my safe place,
+and the love of my life.<br><br>
+
+I miss you so much, Acchu. ❤️
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const message=`If you're reading this,
+
+it means you've opened a little piece of my heart. ❤️
+
+I just wanted to remind you that I miss you...
+more than words can ever express.
+
+Every sunrise makes me wish you were beside me.
+
+Every sunset reminds me that another day has passed without your smile.
+
+No matter how many miles separate us,
+my heart always finds its way back to you.
+
+Thank you for loving me.
+
+Thank you for making my world brighter.
+
+You are my peace.
+You are my happiness.
+You are my home.
+
+Until I can hold your hand again...
+
+Please remember...
+
+You are loved.
+
+You are cherished.
+
+You are deeply missed.
+
+Forever Yours,
+❤️`;
+
+const env=document.getElementById("env");
+const text=document.getElementById("text");
+const btn=document.getElementById("next");
+
+env.onclick=function(){
+
+env.classList.add("open");
+
+env.onclick=null;
+
+let i=0;
+
+function type(){
+
+if(i<message.length){
+
+text.innerHTML+=message.charAt(i);
+
+i++;
+
+setTimeout(type,35);
+
+}else{
+
+btn.style.display="inline-block";
+
+}
+
+}
+
+type();
+
+};
+
+btn.onclick=function(){
+
+document.getElementById("final").style.display="flex";
+
+};
+
+function heart(){
+
+const h=document.createElement("div");
+
+h.className="float";
+
+h.innerHTML=Math.random()>0.5?"❤️":"💕";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=(3+Math.random()*3)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),6000);
+
+}
+
+setInterval(heart,250);
+
+</script>
+
+</body>
+</html>
